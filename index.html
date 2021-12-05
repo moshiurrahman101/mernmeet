@@ -7,20 +7,91 @@
     <title>Let's start call</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1 class="text-center message"></h1>
+    <main class="container-fluid d-flex flex-column home">
+      <div class="v-top text-light">
+        <div class="top-remote-video d-flex">
+          <div class="call">
+            <div class="video">
+              <div id="myself" class="userbox display-center flex-column">
+                <h1 class="display-center"></h1>
+                <div class="display-center">
+                  <video id="localVideo" autoplay muted></video>
+                </div>
+              </div>
+              <div
+                id="otherself"
+                class="userbox display-center flex-column"
+                style="display: none"
+              >
+                <h1 class="display-center"></h1>
+                <video autoplay muted></video>
+                <audio controls autoplay muted style="display: none"></audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="
+            v-bottom
+            bg-light
+            d-flex
+            justify-content-between
+            align-item-center
+          "
+        >
+          <div class="bottom-left cursor-pointer metting-details">
+            Meeting Details <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="bottom-middle d-flex">
+            <div
+              class="mic-onoff action-icon display-center cursor-pointer"
+              id="micOnOff"
+            >
+              <i class="fas fa-microphone-slash"></i>
+            </div>
+            <div
+              class="call-onoff action-icon display-center cursor-pointer"
+              id="callOnOff"
+            >
+              <i class="fas fa-phone"></i>
+            </div>
+            <div
+              class="video-onoff action-icon display-center cursor-pointer"
+              id="videoOnOff"
+            >
+              <i class="fas fa-video-slash"></i>
+            </div>
+          </div>
+          <div
+            class="
+              bottom-right
+              d-flex
+              justify-content-between
+              align-item-center
+            "
+          >
+            <div
+              class="share action-icon display-center cursor-pointer"
+              id="share"
+            >
+              <i class="fas fa-share-square"></i>
+            </div>
+            <div
+              class="more action-icon display-center cursor-pointer"
+              id="more"
+            >
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-      let meetingURL = window.location.href;
-      $(".message").html(
-        "Wait... for confrimed from your host <br/>" +
-          "Your meeting ID: <br/>" +
-          `<a href="${meetingURL}">${meetingURL}</a>`
-      );
-    </script>
   </body>
 </html>
