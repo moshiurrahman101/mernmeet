@@ -34,58 +34,137 @@
             </div>
           </div>
         </div>
-        <div
-          class="
-            v-bottom
-            bg-light
-            d-flex
-            justify-content-between
-            align-item-center
-          "
-        >
-          <div class="bottom-left cursor-pointer metting-details">
-            Meeting Details <i class="fas fa-chevron-up"></i>
+      </div>
+
+      <div class="v-right sidebar w-25 bg-dark">
+        <div class="participant-list">
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
+            </div>
           </div>
-          <div class="bottom-middle d-flex">
-            <div
-              class="mic-onoff action-icon display-center cursor-pointer"
-              id="micOnOff"
-            >
-              <i class="fas fa-microphone-slash"></i>
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
             </div>
-            <div
-              class="call-onoff action-icon display-center cursor-pointer"
-              id="callOnOff"
-            >
-              <i class="fas fa-phone"></i>
+          </div>
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
             </div>
-            <div
-              class="video-onoff action-icon display-center cursor-pointer"
-              id="videoOnOff"
-            >
-              <i class="fas fa-video-slash"></i>
+          </div>
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
             </div>
+          </div>
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
+            </div>
+          </div>
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
+            </div>
+          </div>
+          <div class="user-profile">
+            <i class="fas fa-user profile"></i>
+            <p class="user-name" id="userName">Md Moshiur Rahman</p>
+            <div class="right-icon">
+              <i class="fas fa-microphone"></i>
+              <i class="fas fa-video"></i>
+            </div>
+          </div>
+        </div>
+        <div class="message-box">
+          <div class="input-box">
+            <div class="form-group d-flex p-1">
+              <input
+                type="text"
+                name="message"
+                id="msgInput"
+                class="form-control bg-dark"
+                placeholder="Write your message here..."
+              />
+              <button type="submit" class="btn btn-dark" id="msgSendButton">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bottom menu section  -->
+      <div
+        class="
+          v-bottom
+          bg-light
+          d-flex
+          justify-content-between
+          align-item-center
+        "
+      >
+        <div class="bottom-left cursor-pointer metting-details">
+          Meeting Details <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="bottom-middle d-flex">
+          <div
+            class="mic-onoff action-icon display-center cursor-pointer"
+            id="micOnOff"
+          >
+            <i class="fas fa-microphone-slash"></i>
           </div>
           <div
-            class="
-              bottom-right
-              d-flex
-              justify-content-between
-              align-item-center
-            "
+            class="call-onoff action-icon display-center cursor-pointer"
+            id="callOnOff"
           >
-            <div
-              class="share action-icon display-center cursor-pointer"
-              id="share"
-            >
-              <i class="fas fa-share-square"></i>
-            </div>
-            <div
-              class="more action-icon display-center cursor-pointer"
-              id="more"
-            >
-              <i class="fas fa-ellipsis-v"></i>
-            </div>
+            <i class="fas fa-phone"></i>
+          </div>
+          <div
+            class="video-onoff action-icon display-center cursor-pointer"
+            id="videoOnOff"
+          >
+            <i class="fas fa-video-slash"></i>
+          </div>
+          <div
+            class="share action-icon display-center cursor-pointer"
+            id="share"
+          >
+            <i class="fas fa-share-square"></i>
+          </div>
+          <div
+            class="participant action-icon display-center cursor-pointer"
+            id="participant"
+          >
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="msg action-icon display-center cursor-pointer" id="msg">
+            <i class="fas fa-comment-alt"></i>
+          </div>
+        </div>
+        <div
+          class="bottom-right d-flex justify-content-betweenalign-item-center"
+        >
+          <div class="more action-icon display-center cursor-pointer" id="more">
+            <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
       </div>
@@ -93,5 +172,25 @@
 
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"
+      integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      let urlid = new URLSearchParams(window.location.search);
+      let meetingID = urlid.get("meetingid");
+
+      let userName = window.prompt("Enter Your Username: ");
+
+      if (!userName) {
+        alert("User name is missing!");
+      }
+
+      myvdoapp.init(userName, meetingID);
+    </script>
   </body>
 </html>

@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background: #000;
+  height: 100vh;
+}
+
+.v-bottom {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.v-bottom .action-icon {
+  margin: 0 15px;
+}
+
+.v-bottom .call-onoff {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  background: red;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.share,
+.msg,
+.video-onoff,
+.mic-onoff,
+.profile,
+.participant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  background: #ddd;
+  color: rgb(36, 35, 35);
+  border-radius: 50%;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.v-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.v-top-right i {
+  margin: 20px 30px;
+}
+
+/* right sidebar part  */
+.v-right {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+}
+.v-right .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+.message-box {
+  width: 100%;
+  bottom: 12%;
+  position: absolute;
+  padding-bottom: 5px;
+}
+
+/* .participant part  */
+.participant-list {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 50%;
+}
+.participant-list::-webkit-scrollbar {
+  background: #c0bfbf;
+  width: 10px;
+}
+.participant-list::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+.participant-list::-webkit-scrollbar-thumb {
+  background: rgb(158, 0, 61);
+}
+.user-profile {
+  display: flex;
+  padding: 5px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-profile .user-name {
+  font-weight: bold;
+  margin: 10px;
+}
+.right-icon i {
+  margin: 0 10px;
+}
