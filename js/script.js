@@ -40,6 +40,20 @@ let myvdoapp = (function(){
                 }
             }
         })
+
+        socket.on("myinformation", (dataserver) => {
+            adduservideo(dataserver.myusername, dataserver.connectid);
+        });
+
+        function adduservideo(myusername, connectid) {
+            let newuservideo = $("#otherself").clone();
+            newuservideo = newuservideo.attr("id", connectid).addClass("other")
+            newuservideo.find("h1").text(myusername)
+            newuservideo.find("video").attr("id", `video_${connectid}`)
+            newuservideo.find("audio").attr("id", `audio_${connectid}`)
+            newuservideo.show()
+            $(".video").append(newuservideo)
+        }
     }
 
     return{

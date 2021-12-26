@@ -15,7 +15,7 @@
       <div class="v-top text-light">
         <div class="top-remote-video d-flex">
           <div class="call">
-            <div class="video">
+            <div class="video d-flex">
               <div id="myself" class="userbox display-center flex-column">
                 <h1 class="display-center"></h1>
                 <div class="display-center">
@@ -183,9 +183,7 @@
     <script>
       let urlid = new URLSearchParams(window.location.search);
       let meetingID = urlid.get("meetingid");
-
-      let userName = window.prompt("Enter Your Username: ");
-
+      let userName = window.prompt("Enter your Username: ");
       if (!userName) {
         alert("User name is missing!");
       }
