@@ -11,6 +11,7 @@ const io = require("socket.io")(server)
 // user connection store in this array
 let usersConnection = []
 
+// connection data
 io.on("connection", (socket)=>{
     socket.on("userconnect",(clientData)=>{
         let myid = usersConnection.filter((user)=> user.meetingid == clientData.meetingid);
@@ -26,6 +27,14 @@ io.on("connection", (socket)=>{
             })
         })
     })
+})
+
+// SDPfunction data
+io.on("SDPfunction", (data)=> {
+    io.to(data.connectid).emit("SDPfunction"),{
+        message: data.message,
+        from_connectid: data.connectid
+    }
 })
 
 app.use(express.static(path.join(__dirname,"")))
